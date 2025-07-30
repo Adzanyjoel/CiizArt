@@ -1,0 +1,95 @@
+html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind slate-50 */
+            color: #334155; /* Tailwind slate-700 */
+            /* Add padding to the body to prevent content from being hidden behind the fixed header */
+            padding-top: 5rem; /* Adjust based on header height, roughly 80px */
+        }
+        /* Hero section background image styling */
+        .hero-background {
+            background-image: url('img/logonavbar.png'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
+            height: 500px; /* Adjust height as needed */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom-left-radius: 1.5rem; /* rounded-b-3xl */
+            border-bottom-right-radius: 1.5rem; /* rounded-b-3xl */
+            overflow: hidden; /* Ensure rounded corners clip content */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            color: white;
+        }
+        /* Styles for both carousels */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            border-radius: 1rem; /* rounded-xl */
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .carousel-images img {
+            min-width: 100%;
+            max-width: 100%;
+            object-fit: cover; /* Ensure images cover the area */
+            height: 100%; /* Fixed height for consistency */
+            width: 100%;
+            border-radius: 0.75rem; /* rounded-lg */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .carousel-images img {
+                height: 500px;
+            }
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 9999px; /* rounded-full */
+            cursor: pointer;
+            z-index: 10;
+            transition: background-color 0.3s ease;
+        }
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .carousel-button.prev {
+            left: 1rem;
+        }
+        .carousel-button.next {
+            right: 1rem;
+        }
+
+        /* Styles for images within pricing cards */
+        .pricing-card-image {
+            width: 100%;
+            height: 200px; /* Fixed height for pricing images */
+            object-fit: cover;
+            border-radius: 0.75rem; /* rounded-lg */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }

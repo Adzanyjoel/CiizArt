@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiizArt - Manual Drawing Photobooth</title>
+    <link rel="shortcut icon" href="img/logopage.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0x0ug8rZ6eXv/oK2z+fKz+oA6P5+A6c4x+r0Gv/K6I6A7Bw+n5+w5+r6w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+
+    <!-- Header Section -->
+    <!-- Added 'fixed', 'top-0', 'left-0', 'right-0', 'z-50' to make the header sticky -->
+    <header class="bg-white shadow-md py-4 fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="flex items-center text-2xl font-bold text-puple-800 rounded-lg p-2 hover:bg-indigo-50 transition-colors">
+                <img src="img/logopage.png" alt="Logo CiizArt" class="w-8 h-8 mr-2 rounded-full">
+                CiizArt
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Beranda</a>
+                <a href="#pricing" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Daftar Paket Harga</a>
+                <a href="#pricing" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Daftar Harga</a>
+                <a href="#gallery" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Galeri</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Kontak</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-indigo-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-lg">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Beranda</a>
+            <a href="#bundle" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Daftar Paket Harga</a>
+            <a href="#pricing" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Daftar Harga</a>
+            <a href="#gallery" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Galeri</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Kontak</a>
+        </div>
+    </header>
+
+     <!-- Hero Section (with background image) -->
+    <section id="home" class="mx-auto max-w-7xl shadow-lg">
+        <div class="hero-background">
+            <div class="hero-overlay">
+                <div class="container mx-auto px-4">
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                        Abadikan Momen Spesial Anda dengan CiizArt!
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 opacity-90">
+                        Ciptakan kenangan tak terlupakan dengan gambaran manual dan lucu.
+                    </p>
+                    <a href="#bundle" class="bg-white text-purple-700 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                        Lihat Daftar Paket Harga
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Bundle Section (with images) -->
+<section id="bundle" class="py-16 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg mx-auto mt-12 max-w-7xl px-4">
+    <div class="container mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 mt-12 text-gray-800">Daftar Paket Harga Kami</h2>
+        <p class="text-center text-lg text-gray-600 mb-12">Pilih Paket yang paling sesuai budget untuk moment spesial Anda.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 text-center gap-8">
+            <!-- 1 Bundle Art -->
+            <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center border-t-4 border-indigo-500 transform hover:scale-105 transition-transform duration-300">
+                <img src="img/bundle/bundle 1.jpg" alt="Bundle 1" class="rounded-xl mb-4 w-full h-50 object-cover">
+                <h3 class="text-xl font-bold text-indigo-600 mb-4">Package Bundle 1</h3>
+                <p class="text-md font-extrabold text-gray-900 mb-6">Rp 50.000</p>
+                <ul class="text-gray-700 text-sm space-y-3 mb-8 text-left w-full">
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Free Keychain</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>1 pcs 1F Monokrom</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>1 pcs 2F Monokrom</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>1 pcs 3F Full Colored</li>
+                </ul>
+                <a href="https://wa.me/6287761935847?text=Halo%20CiizArt%2C%20saya%20tertarik%20dengan%20Bundle%20Package%201%20nya!%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut%3F"
+                   target="_blank" class="bg-indigo-600 text-white font-bold text-sm py-3 px-4 rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-300">Pesan Sekarang</a>
+            </div>
+            <!-- 2 Bundle Art -->
+            <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center border-t-4 border-pink-500 transform hover:scale-105 transition-transform duration-300">
+                <img src="img/bundle/bundle 2.jpg" alt="Bundle 2" class="rounded-xl mb-4 w-full h-50 object-cover">
+                <h3 class="text-xl font-bold text-indigo-600 mb-4">Package Bundle 2</h3>
+                <p class="text-md font-extrabold text-gray-900 mb-6">Rp 40.000</p>
+                <ul class="text-gray-700 text-md space-y-3 mb-8 text-left w-full">
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Keychain + Rp 5.000</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Full Colored + Rp 5.000</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>2 pcs 3F Monokrom</li>
+                </ul>
+                <a href="https://wa.me/6287761935847?text=Halo%20CiizArt%2C%20saya%20tertarik%20dengan%20Bundle%20Package%202%20nya!%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut%3F"
+                   target="_blank" class="bg-indigo-600 text-white font-bold text-sm py-3 px-4 rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-300">Pesan Sekarang</a>
+            </div>
+            <!-- 3 Bundle Art -->
+            <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center border-t-4 border-purple-500 transform hover:scale-105 transition-transform duration-300">
+                <img src="img/bundle/bundle 3.jpg" alt="Bundle 3" class="rounded-xl mb-4 w-full h-50 object-cover">
+                <h3 class="text-xl font-bold text-indigo-600 mb-4">Package Bundle 3</h3>
+                <p class="text-md font-extrabold text-gray-900 mb-6">Rp 40.000</p>
+                <ul class="text-gray-700 text-md space-y-3 mb-8 text-left w-full">
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Keychain + Rp 5.000</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Full Colored + Rp 5.000</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>1 pcs 1F Full Colored</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>1 pcs 2F Monokrom</li>
+                </ul>
+                <a href="https://wa.me/6287761935847?text=Halo%20CiizArt%2C%20saya%20tertarik%20dengan%20Bundle%20Package%203%20nya!%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut%3F"
+                   target="_blank" class="bg-indigo-600 text-white font-bold text-sm py-3 px-4 rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-300">Pesan Sekarang</a>
+            </div>
+            <!-- 4 Frame Art -->
+            <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center border-t-4 border-indigo-500 transform hover:scale-105 transition-transform duration-300">
+                <img src="img/bundle/bundle 4.jpg" alt="Bundle 4" class="rounded-xl mb-4 w-full h-50 object-cover">
+                <h3 class="text-xl font-bold text-indigo-600 mb-4">Package Bundle 4</h3>
+                <p class="text-md font-extrabold text-gray-900 mb-6">Rp 35.000</p>
+                <ul class="text-gray-700 text-md space-y-3 mb-8 text-left w-full">
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Keychain + Rp 5.000</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Full Colored + Rp 5.000</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>3 pcs 1F Monokrom</li>
+                </ul>
+                <a href="https://wa.me/6287761935847?text=Halo%20CiizArt%2C%20saya%20tertarik%20dengan%20Bundle%20Package%204%20nya!%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut%3F"
+                   target="_blank" class="bg-indigo-600 text-white font-bold text-sm py-3 px-4 rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-300">Pesan Sekarang</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Pricing Section (with images) -->
+    <section id="pricing" class="py-16 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg mx-auto mt-12 max-w-7xl px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 mt-12 text-gray-800">Daftar Harga Kami</h2>
+            <p class="text-center text-lg text-gray-600 mb-12">Pilih paket yang paling sesuai untuk moment spesial Anda.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 1 frame -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center border-t-4 border-indigo-500 transform hover:scale-105 transition-transform duration-300">
+                    <div id="pricing-basic-carousel" class="carousel-container relative w-full mb-4">
+                        <div class="carousel-images flex transition-transform duration-500 ease-in-out">
+                            <img src="img/frame 1/1 Strip 1.png" alt="Design Frame 1" class="rounded-xl">
+                            <img src="img/frame 1/1 Strip 2.png" alt="Design Frame 2" class="rounded-xl">
+                            <img src="img/frame 1/1 Strip 3.png" alt="Design Frame 3" class="rounded-xl">
+                        </div>
+                        <button class="carousel-button prev" id="pricing-basic-prev" aria-label="Previous image">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <button class="carousel-button next" id="pricing-basic-next" aria-label="Next image">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-bold text-indigo-600 mb-4">1 Frame Art</h3>
+                    <p class="text-md font-extrabold text-gray-900 mb-6">Rp 15.000</p>
+                    <ul class="text-gray-700 text-md space-y-3 mb-8 text-left w-full">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Monokrom</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Include Keychain</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Full Colour + Rp. 5.000</li>
+                    </ul>
+                    <a href="https://wa.me/6287761935847?text=Halo%20CiizArt%2C%20saya%20tertarik%20dengan%201%20Frame%20Art%20nya%20!%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut%3F"
+                   target="_blank" class="bg-indigo-600 text-white font-bold py-3 px-4 rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-300">Pesan Sekarang</a>
+                </div>
+                <!-- 2 Frame -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center border-t-4 border-indigo-500 transform hover:scale-105 transition-transform duration-300">
+                    <div id="pricing-standard-carousel" class="carousel-container relative w-full mb-4">
+                        <div class="carousel-images">
+                            <img src="img/frame 2/2 Strip 1.png" alt="Design Frame 1" class="rounded-xl">
+                            <img src="img/frame 2/2 Strip 2.png" alt="Design Frame 2" class="rounded-xl">
+                            <img src="img/frame 2/2 Strip 3.png" alt="Design Frame 3" class="rounded-xl">
+                        </div>
+                        <button class="carousel-button prev" id="pricing-standard-prev" aria-label="Previous image">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <button class="carousel-button next" id="pricing-standard-next" aria-label="Next image">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-600 mb-4">2 Frame Art</h3>
+                    <p class="text-md font-extrabold text-gray-900 mb-6">Rp 17.000</p>
+                    <ul class="text-gray-700 text-md space-y-3 mb-8 text-left w-full">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Monokrom</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Exclude Keychain</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Full Colour + Rp. 5.000</li>
+                    </ul>
+                    <a href="https://wa.me/6287761935847?text=Halo%20CiizArt%2C%20saya%20tertarik%20dengan%202%20Frame%20Art%20nya%20!%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut%3F"
+                   target="_blank" class="bg-purple-600 text-white font-bold py-3 px-4 rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-300">Pesan Sekarang</a>
+                </div>
+                <!-- 3 Frame -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center border-t-4 border-indigo-500 transform hover:scale-105 transition-transform duration-300">
+                    <div id="pricing-premium-carousel" class="carousel-container relative w-full mb-4">
+                        <div class="carousel-images">
+                            <img src="img/frame 3/3 Strip 1.png" alt="Design Frame 1" class="rounded-xl">
+                            <img src="img/frame 3/3 Strip 2.png" alt="Design Frame 2" class="rounded-xl">
+                            <img src="img/frame 3/3 Strip 3.png" alt="Design Frame 3" class="rounded-xl">
+                        </div>
+                        <button class="carousel-button prev" id="pricing-premium-prev" aria-label="Previous image">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <button class="carousel-button next" id="pricing-premium-next" aria-label="Next image">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-bold text-pink-600 mb-4">3 Frame Art</h3>
+                    <p class="text-md font-extrabold text-gray-900 mb-6">Rp 24.000</p>
+                    <ul class="text-gray-700 text-md space-y-3 mb-8 text-left w-full">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Monokrom</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Exclude Keychain</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Full Colour + Rp. 2.000</li>
+                    </ul>
+                    <a href="https://wa.me/6287761935847?text=Halo%20CiizArt%2C%20saya%20tertarik%20dengan%203%20Frame%20Art%20nya%20!%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut%3F"
+                   target="_blank" class="bg-pink-600 text-white font-bold py-3 px-4 rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-300">Pesan Sekarang</a>
+                </div>
+
+            </div>
+            <div class="text-center mt-20">
+                <a href="#gallery" class="bg-purple-600 text-white font-bold py-3 px-4 rounded-full shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">
+                    Lihat Galeri Kami
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white rounded-xl shadow-lg mx-auto mt-12 max-w-7xl px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 mt-12 text-gray-800">Galeri CiizArt</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+                <img src="img/gallery/foto 1.jpg" alt="foto 1" class="rounded-xl shadow-md w-full object-cover h-64">
+                <img src="img/gallery/foto 2.jpg" alt="foto 2" class="rounded-xl shadow-md w-full object-cover h-64">
+                <img src="img/gallery/foto 3.jpg" alt="foto 3" class="rounded-xl shadow-md w-full object-cover h-64">
+                <img src="img/gallery/foto 4.jpg" alt="foto 4" class="rounded-xl shadow-md w-full object-cover h-64">
+                <img src="img/gallery/foto 5.jpg" alt="foto 5" class="rounded-xl shadow-md w-full object-cover h-64">
+                <img src="img/gallery/foto 6.jpg" alt="foto 6" class="rounded-xl shadow-md w-full object-cover h-64">
+            </div>
+            <div class="text-center mt-10">
+                <a href="#bundle" class="bg-indigo-600 text-white font-bold py-3 px-4 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">
+                    Lihat Daftar Paket Harga
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (WhatsApp focused) -->
+    <section id="contact" class="py-16 bg-white rounded-xl shadow-lg mx-auto mt-12 mb-12 max-w-7xl px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 mt-12 text-gray-800">Hubungi Kami</h2>
+            <p class="text-lg text-gray-600 mb-8">Siap untuk membuat kenangan Anda lebih berkesan? Hubungi kami langsung melalui WhatsApp!</p>
+            <div class="max-w-md mx-auto bg-gray-50 p-8 rounded-xl shadow-inner">
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/6287761935847?text=Halo%20CiizArt%2C%20saya%20tertarik%20dengan%20layanan%20photo%20art%20Anda.%20Bisakah%20Anda%20memberikan%20informasi%20lebih%20lanjut%3F"
+                   target="_blank"
+                   class="inline-flex items-center justify-center w-full bg-green-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-105 mb-6">
+                   <i class="fab fa-whatapp"></i
+            >
+                    Chat via WhatsApp
+                </a>
+                <div class="mt-8 text-gray-600">
+                    <p class="mb-2">Atau hubungi kami melalui:</p>
+                    <a
+              href="https://www.instagram.com/ciizart_photocard?igsh=bTQwcDdkMm44MWw0"
+              target="_blank"
+              class="text-indigo-600 hover:text-black transition duration-300 text-3xl"
+              ><i class="fab fa-instagram"></i
+            ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white text-sm py-8 text-center shadow-inner mx-auto max-w-7xl">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Ilhamd Adzany. Hak Cipta Dilindungi Undang-Undang.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
